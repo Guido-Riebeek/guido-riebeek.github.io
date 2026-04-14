@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Plainly by Puredata OÜ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --warm-white: #faf8f4;
+      --walnut: #4a3728;
+      --walnut-mid: #6b4f3a;
+      --walnut-light: #8c6e57;
+      --tan: #c9b49a;
+      --tan-light: #e4d9cc;
+      --text-dark: #2a1f17;
+      --text-mid: #6b5a4e;
+      --text-light: #9e8a7d;
+      --destructive: #a03030;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--warm-white);
+      color: var(--text-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      background: rgba(250, 248, 244, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--tan-light);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--walnut);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-back {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--walnut); }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    .page-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--walnut-light);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: var(--walnut);
+      line-height: 1.15;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--tan-light);
+    }
+
+    .intro {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 3rem;
+    }
+
+    .steps {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .steps-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--walnut-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .step:last-child { margin-bottom: 0; }
+
+    .step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--tan);
+      line-height: 1;
+      min-width: 1.5rem;
+      padding-top: 0.1rem;
+    }
+
+    .step-content {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    .step-content strong {
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .step-content a {
+      color: var(--walnut);
+      text-decoration: none;
+      border-bottom: 1px solid var(--tan);
+      transition: border-color 0.2s;
+    }
+
+    .step-content a:hover { border-color: var(--walnut); }
+
+    .data-box {
+      border: 1px solid var(--tan-light);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .data-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--walnut);
+      margin-bottom: 1rem;
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--tan-light);
+      gap: 1rem;
+    }
+
+    .data-row:last-child { border-bottom: none; }
+
+    .data-type {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      font-weight: 400;
+    }
+
+    .data-outcome {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      text-align: right;
+    }
+
+    .data-outcome.deleted { color: var(--destructive); }
+    .data-outcome.retained { color: var(--walnut-light); }
+
+    .notice {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .notice a {
+      color: var(--walnut-mid);
+    }
+
+    footer {
+      background: var(--walnut);
+      color: rgba(245, 240, 232, 0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer span { color: rgba(245, 240, 232, 0.8); }
+    footer a { color: rgba(245, 240, 232, 0.6); text-decoration: none; }
+    footer a:hover { color: rgba(245, 240, 232, 0.9); }
+
+    @media (max-width: 700px) {
+      nav { padding: 1.2rem 1.5rem; }
+      main { padding: 8rem 1.5rem 4rem; }
+      .data-row { flex-direction: column; gap: 0.2rem; }
+      .data-outcome { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Puredata OÜ</a>
+    <a href="/" class="nav-back">← Home</a>
+  </nav>
+
+  <main>
+    <p class="page-label">Plainly — Account Management</p>
+    <h1>Request Account Deletion</h1>
+
+    <p class="intro">
+      You can request the deletion of your Plainly account and all associated data at any time.
+      Plainly is developed by Puredata OÜ, registered in Estonia, EU. We comply with GDPR and
+      will process all deletion requests within 30 days.
+    </p>
+
+    <div class="steps">
+      <p class="steps-label">How to request deletion</p>
+
+      <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-content">
+          Send an email to <a href="mailto:info@puredata.ee?subject=Account deletion request — Plainly">info@puredata.ee</a>
+          with the subject line <strong>Account deletion request — Plainly</strong>.
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-content">
+          Include the <strong>email address associated with your Plainly account</strong>
+          so we can locate your data.
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-content">
+          We will confirm receipt and process your request within <strong>30 days</strong>.
+          You will receive a confirmation email once deletion is complete.
+        </div>
+      </div>
+    </div>
+
+    <div class="data-box">
+      <h2>What gets deleted</h2>
