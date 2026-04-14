@@ -482,42 +482,49 @@
 
   <!-- PRIVACY POLICY -->
   <section class="privacy" id="privacy">
-    <div class="container">
-      <p class="section-label">Legal</p>
-      <h2 class="section-title">Privacy Policy</h2>
-      <p class="section-body">We take your privacy seriously. Here is a plain-language summary of how we handle your data.</p>
-
-      <div class="privacy-content">
-        <p><strong>Effective date:</strong> April 2026 &nbsp;·&nbsp; <strong>App:</strong> Plainly &nbsp;·&nbsp; <strong>Developer:</strong> Puredata OÜ, Estonia</p>
-
-        <h3>What data we collect</h3>
-        <p>Plainly is designed to work with the minimum data necessary. Depending on features you use, we may store:</p>
-        <ul>
-          <li>Financial transaction data and budget entries you manually create</li>
-          <li>Account preferences (currency, timezone, display settings)</li>
-          <li>An anonymous device identifier for sync purposes</li>
-        </ul>
-
-        <h3>What we do not collect</h3>
-        <ul>
-          <li>We do not sell your data to any third party</li>
-          <li>We do not use your data for advertising</li>
-          <li>We do not share your financial data with any external service without your explicit consent</li>
-        </ul>
-
-        <h3>Data storage</h3>
-        <p>Your data is stored locally on your device. Cloud sync, when available, uses encrypted storage. We do not have access to the contents of your financial data.</p>
-
-        <h3>Third-party services</h3>
-        <p>The app may use standard mobile platform services (Apple App Store, Google Play) which have their own privacy policies. We do not integrate third-party advertising or analytics SDKs.</p>
-
-        <h3>Your rights</h3>
-        <p>You may request deletion of your account and associated data at any time by contacting us at the address below. As an Estonian-registered company, we comply with GDPR.</p>
-
-        <h3>Contact</h3>
-        <p>For privacy-related questions, please contact us at <a href="mailto:info@puredata.ee" style="color: var(--walnut);">Contact us</a></p>
-      </div>
+    <div class="privacy-content">
+      <p><strong>Effective date:</strong> April 2026 &nbsp;·&nbsp; <strong>App:</strong> Plainly &nbsp;·&nbsp; <strong>Data controller:</strong> Puredata OÜ, Estonia</p>
+    
+      <h3>Who we are</h3>
+      <p>Plainly is developed and operated by Puredata OÜ, a company registered in Estonia, European Union. As an EU-registered company we are subject to the General Data Protection Regulation (GDPR).</p>
+    
+      <h3>What data we collect and why</h3>
+      <p>Plainly is designed to work locally on your device without requiring an account. If you choose to enable cloud sync (a paid feature), we collect the minimum data necessary to provide it:</p>
+      <ul>
+        <li><strong>Email address</strong> — used solely to create and authenticate your account. We do not send marketing email.</li>
+        <li><strong>Financial data you enter</strong> — transactions, budgets, accounts, and goals that you manually create in the app. This data is encrypted in transit and stored in our database.</li>
+        <li><strong>Purchase and subscription data</strong> — processed by RevenueCat (our billing provider) to verify your subscription status. RevenueCat receives your anonymised App Store or Google Play purchase receipt. We do not store your payment card details.</li>
+      </ul>
+      <p>Free users who do not create an account have all their data stored locally on their device only. We have no access to it.</p>
+    
+      <h3>What we do not collect</h3>
+      <ul>
+        <li>We do not collect advertising identifiers</li>
+        <li>We do not use analytics or behavioural tracking SDKs</li>
+        <li>We do not sell your data to any third party</li>
+        <li>We do not share your financial data with any external service</li>
+      </ul>
+    
+      <h3>Data storage and security</h3>
+      <p>Cloud data for synced accounts is stored in a PostgreSQL database hosted by Supabase in Frankfurt, Germany (EU). Data is encrypted in transit using TLS. We apply row-level security so that each user's data is accessible only to them.</p>
+    
+      <h3>Third-party processors</h3>
+      <ul>
+        <li><strong>Supabase</strong> — database and authentication hosting (Frankfurt, EU). <a href="https://supabase.com/privacy" style="color: var(--walnut);">Privacy policy</a></li>
+        <li><strong>RevenueCat</strong> — subscription and purchase management. <a href="https://www.revenuecat.com/privacy" style="color: var(--walnut);">Privacy policy</a></li>
+        <li><strong>Google Play</strong> — app distribution and payment processing for Android. <a href="https://policies.google.com/privacy" style="color: var(--walnut);">Privacy policy</a></li>
+      </ul>
+    
+      <h3>Data retention</h3>
+      <p>Your account data is retained for as long as your account is active. If you delete your account, all associated data is deleted from our servers within 30 days.</p>
+    
+      <h3>Your rights under GDPR</h3>
+      <p>As a data subject under GDPR you have the right to access, rectify, or erase your personal data, to restrict or object to processing, and to data portability. To exercise any of these rights, contact us at the address below.</p>
+    
+      <h3>Contact</h3>
+      <p>For privacy-related questions or data deletion requests, contact us at <a href="mailto:info@puredata.ee" style="color: var(--walnut);">info@puredata.ee</a>. We will respond within 30 days.</p>
     </div>
+
   </section>
 
   <!-- CONTACT -->
