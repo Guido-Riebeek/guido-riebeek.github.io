@@ -435,17 +435,14 @@
 
         <h2>What data we collect and why</h2>
         <p>PokerPall works without an account. No email address, no sign-in, no profile. The sections below cover every type of data that flows outside your device.</p>
-
-        <p><strong>Game history and player data</strong> — everything you enter (player names, buy-in amounts, chip counts, game results) is stored locally on your device. This data is never sent to our servers.</p>
-
-        <p><strong>Multiplayer session data</strong> — when you start or join a multiplayer game, the room code and the player name you enter for that session are sent to Supabase to sync the game across devices in real time. This data exists only for the duration of the game. When the game ends, the session is deleted from Supabase immediately. No game history is retained server-side.</p>
-
-        <p><strong>Anonymous usage analytics</strong> — we use PostHog to collect anonymous usage events such as which screens you visit and which features you use. These events contain no personal data and cannot be linked to you individually. This helps us understand how the app is being used so we can improve it.</p>
-
-        <p><strong>Advertising (free tier only)</strong> — if you use the free tier, Google AdMob displays banner and interstitial ads. Google may collect your advertising identifier (IDFA on iOS, GAID on Android) and use it to personalise ads. This data is controlled by Google under their privacy policy. You can opt out of personalised ads in your device settings. The premium tier has no ads and no advertising data is collected.</p>
-
-        <p><strong>In-app purchase</strong> — if you purchase the premium upgrade, the transaction is processed entirely by Google Play or Apple App Store. RevenueCat receives an anonymised purchase receipt to verify your purchase status. We do not see or store your payment details.</p>
-
+        <ul>
+            <li><p><strong>Game history and player data</strong> — everything you enter (player names, buy-in amounts, chip counts, game results) is stored locally on your device. This data is never sent to our servers.</p></li>
+            <li><p><strong>Multiplayer session data</strong> — when you start or join a multiplayer game, the room code and the player name you enter for that session are sent to Supabase to sync the game across devices in real time. This data exists only for the duration of the game. When the game ends, the session is deleted from Supabase immediately. No game history is retained server-side.</p> </li>
+            <li><p><strong>Camera (when scanning a QR code)</strong> — the app requests camera access only when you choose to scan a QR code to join a multiplayer game. The camera is never accessed silently or in the background, and no images or video are captured or stored.</p></li>
+            <li><p><strong>Anonymous usage analytics</strong> — we use PostHog to collect anonymous usage events such as which screens you visit and which features you use. These events contain no personal data and cannot be linked to you individually. This helps us understand how the app is being used so we can improve it.</p></li>
+            <li><p><strong>Advertising (free tier only)</strong> — if you use the free tier, Google AdMob displays banner and interstitial ads. Google may collect your advertising identifier (IDFA on iOS, GAID on Android) and use it to personalise ads. This data is controlled by Google under their privacy policy. You can opt out of personalised ads in your device settings. The premium tier has no ads and no advertising data is collected.</p></li>
+            <li><p><strong>In-app purchase</strong> — if you purchase the premium upgrade, the transaction is processed entirely by Google Play or Apple App Store. RevenueCat receives an anonymised purchase receipt to verify your purchase status. We do not see or store your payment details.</p></li>
+        </ul>
         <h2>What we do not collect</h2>
         <ul>
           <li>We do not collect your name, email address, or any contact information</li>
