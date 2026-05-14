@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Plainly by Puredata OÜ</title>
+  <title>Privacy Policy — Puredata OÜ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -31,6 +31,7 @@
       line-height: 1.6;
     }
 
+    /* ── Nav — identical to existing site ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -62,9 +63,9 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
     .nav-back:hover { color: var(--walnut); }
 
+    /* ── Layout ── */
     main {
       max-width: 760px;
       margin: 0 auto;
@@ -88,14 +89,123 @@
       margin-bottom: 0.5rem;
     }
 
-    .effective-date {
-      font-size: 0.82rem;
-      color: var(--text-light);
+    .page-intro {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid var(--tan-light);
+      margin-bottom: 2rem;
+    }
+
+    /* ── App selector ── */
+    .selector-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--walnut-light);
+      margin-bottom: 1rem;
+    }
+
+    .app-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 3rem;
-      padding-bottom: 2rem;
+    }
+
+    .app-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--tan-light);
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .app-pill:hover {
+      border-color: var(--tan);
+      color: var(--walnut);
+    }
+
+    .app-pill.active {
+      background: var(--walnut);
+      border-color: var(--walnut);
+      color: var(--cream);
+    }
+
+    /* ── Policy panel ── */
+    .policy-panel { display: none; }
+    .policy-panel.visible {
+      display: block;
+      animation: fadeUp 0.2s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(5px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── App header ── */
+    .app-header {
+      padding-bottom: 1.5rem;
+      margin-bottom: 0;
       border-bottom: 1px solid var(--tan-light);
     }
 
+    .app-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--walnut);
+      margin-bottom: 0.3rem;
+    }
+
+    .app-meta {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-bottom: 0.9rem;
+    }
+
+    .quick-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fact-chip {
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-weight: 300;
+    }
+
+    .fact-chip.yes {
+      border: 1px solid #c2d6c8;
+      color: #3a6645;
+      background: #f0f7f2;
+    }
+
+    .fact-chip.note {
+      border: 1px solid var(--tan);
+      color: var(--walnut-mid);
+      background: #fdf8f2;
+    }
+
+    /* ── Policy body — same styles as existing privacy.html ── */
     .privacy-content h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.3rem;
@@ -103,8 +213,6 @@
       color: var(--walnut);
       margin: 2.5rem 0 0.6rem;
     }
-
-    .privacy-content h2:first-child { margin-top: 0; }
 
     .privacy-content p,
     .privacy-content li {
@@ -120,12 +228,58 @@
     }
 
     .privacy-content li { margin-bottom: 0.4rem; }
-
     .privacy-content a { color: var(--walnut); }
     .privacy-content a:hover { color: var(--walnut-mid); }
-
     .privacy-content strong { font-weight: 500; color: var(--text-dark); }
 
+    /* ── Processors table ── */
+    .processors-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.5rem 0 0.5rem;
+    }
+
+    .processors-table th {
+      text-align: left;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      font-weight: 400;
+      padding: 0.45rem 0.75rem;
+      border-bottom: 1px solid var(--tan-light);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .processors-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--tan-light);
+      color: var(--text-mid);
+      vertical-align: top;
+      line-height: 1.6;
+      font-size: 0.88rem;
+    }
+
+    .processors-table tr:last-child td { border-bottom: none; }
+    .processors-table td:first-child { font-weight: 500; color: var(--text-dark); white-space: nowrap; }
+    .processors-table a { color: var(--walnut-light); font-size: 0.8rem; }
+
+    /* ── Shared GDPR block ── */
+    .shared-section {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--tan-light);
+    }
+
+    .shared-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--walnut-light);
+      margin-bottom: 0;
+    }
+
+    /* ── Footer — identical to existing site ── */
     footer {
       background: var(--walnut);
       color: rgba(245, 240, 232, 0.5);
@@ -153,57 +307,249 @@
   </nav>
 
   <main>
+
     <p class="page-label">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Effective date: April 2026 &nbsp;·&nbsp; App: Plainly &nbsp;·&nbsp; Data controller: Puredata OÜ, Estonia</p>
+    <p class="page-intro">We're a small studio from Estonia. We build apps that respect your data. Select an app below to read its specific privacy policy.</p>
 
-    <div class="privacy-content">
+    <hr class="rule">
 
-      <h2>Who we are</h2>
-      <p>Plainly is developed and operated by Puredata OÜ, a company registered in Estonia, European Union. As an EU-registered company we are subject to the General Data Protection Regulation (GDPR).</p>
+    <p class="selector-label">Select an app</p>
 
-      <h2>What data we collect and why</h2>
-      <p>Plainly is designed to work locally on your device without requiring an account. If you choose to enable cloud sync (a paid feature), we collect the minimum data necessary to provide it:</p>
-      <ul>
-        <li><strong>Email address</strong> — used solely to create and authenticate your account. We do not send marketing email.</li>
-        <li><strong>Financial data you enter</strong> — transactions, budgets, accounts, and goals that you manually create in the app. This data is encrypted in transit and stored in our database.</li>
-        <li><strong>Purchase and subscription data</strong> — processed by RevenueCat (our billing provider) to verify your subscription status. RevenueCat receives your anonymised App Store or Google Play purchase receipt. We do not store your payment card details.</li>
-      </ul>
-      <p>Free users who do not create an account have all their data stored locally on their device only. We have no access to it.</p>
+    <div class="app-pills" role="tablist" aria-label="Select app privacy policy">
 
-      <h2>What we do not collect</h2>
-      <ul>
-        <li>We do not collect advertising identifiers</li>
-        <li>We do not use analytics or behavioural tracking SDKs</li>
-        <li>We do not sell your data to any third party</li>
-        <li>We do not share your financial data with any external service</li>
-      </ul>
+      <button class="app-pill active" role="tab" aria-selected="true" aria-controls="panel-plainly" onclick="showApp('plainly', this)">
+        𝙥 &thinsp;Plainly
+      </button>
 
-      <h2>Data storage and security</h2>
-      <p>Cloud data for synced accounts is stored in a PostgreSQL database hosted by Supabase in Frankfurt, Germany (EU). Data is encrypted in transit using TLS. We apply row-level security so that each user's data is accessible only to them.</p>
+      <button class="app-pill" role="tab" aria-selected="false" aria-controls="panel-pokerpall" onclick="showApp('pokerpall', this)">
+        ♠ &thinsp;PokerPall
+      </button>
 
-      <h2>Third-party processors</h2>
-      <ul>
-        <li><strong>Supabase</strong> — database and authentication hosting (Frankfurt, EU). <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
-        <li><strong>RevenueCat</strong> — subscription and purchase management. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
-        <li><strong>Google Play</strong> — app distribution and payment processing for Android. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
-      </ul>
-
-      <h2>Data retention</h2>
-      <p>Your account data is retained for as long as your account is active. If you delete your account, all associated data is deleted from our servers within 30 days.</p>
-
-      <h2>Your rights under GDPR</h2>
-      <p>As a data subject under GDPR you have the right to access, rectify, or erase your personal data, to restrict or object to processing, and to data portability. To exercise any of these rights, contact us at the address below.</p>
-
-      <h2>Contact</h2>
-      <p>For privacy-related questions or data deletion requests, contact us at <a href="mailto:info@puredata.ee">info@puredata.ee</a>. We will respond within 30 days.</p>
+      <!-- ADD A NEW APP: copy a <button> above and add a matching panel below -->
 
     </div>
+
+
+    <!-- ══════════════════════════════
+         APP: PLAINLY
+    ══════════════════════════════ -->
+    <div class="policy-panel visible" id="panel-plainly" role="tabpanel">
+
+      <div class="app-header">
+        <p class="app-name">Plainly</p>
+        <p class="app-meta">Effective date: April 2026 &nbsp;·&nbsp; Platform: iOS &amp; Android &nbsp;·&nbsp; Data controller: Puredata OÜ, Estonia</p>
+        <div class="quick-facts">
+          <span class="fact-chip yes">No account required</span>
+          <span class="fact-chip yes">Local-first storage</span>
+          <span class="fact-chip yes">No ads</span>
+          <span class="fact-chip note">Optional cloud sync (paid)</span>
+        </div>
+      </div>
+
+      <div class="privacy-content">
+
+        <h2>Who we are</h2>
+        <p>Plainly is developed and operated by Puredata OÜ, a company registered in Estonia, European Union. As an EU-registered company we are subject to the General Data Protection Regulation (GDPR).</p>
+
+        <h2>What data we collect and why</h2>
+        <p>Plainly is designed to work locally on your device without requiring an account. If you choose to enable cloud sync (a paid feature), we collect the minimum data necessary to provide it:</p>
+        <ul>
+          <li><strong>Email address</strong> — used solely to create and authenticate your account. We do not send marketing email.</li>
+          <li><strong>Financial data you enter</strong> — transactions, budgets, accounts, and goals that you manually create in the app. This data is encrypted in transit and stored in our database.</li>
+          <li><strong>Purchase and subscription data</strong> — processed by RevenueCat (our billing provider) to verify your subscription status. RevenueCat receives your anonymised App Store or Google Play purchase receipt. We do not store your payment card details.</li>
+        </ul>
+        <p>Free users who do not create an account have all their data stored locally on their device only. We have no access to it.</p>
+
+        <h2>What we do not collect</h2>
+        <ul>
+          <li>We do not collect advertising identifiers</li>
+          <li>We do not use analytics or behavioural tracking SDKs</li>
+          <li>We do not sell your data to any third party</li>
+          <li>We do not share your financial data with any external service</li>
+        </ul>
+
+        <h2>Data storage and security</h2>
+        <p>Cloud data for synced accounts is stored in a PostgreSQL database hosted by Supabase in Frankfurt, Germany (EU). Data is encrypted in transit using TLS. We apply row-level security so that each user's data is accessible only to them.</p>
+
+        <h2>Third-party processors</h2>
+        <table class="processors-table">
+          <thead>
+            <tr><th>Processor</th><th>Purpose</th><th>Location</th><th>Policy</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Supabase</td>
+              <td>Database and authentication hosting</td>
+              <td>Frankfurt, EU</td>
+              <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>RevenueCat</td>
+              <td>Subscription and purchase management</td>
+              <td>USA</td>
+              <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Google Play</td>
+              <td>App distribution and payment (Android)</td>
+              <td>USA</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Apple App Store</td>
+              <td>App distribution and payment (iOS)</td>
+              <td>USA</td>
+              <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Data retention</h2>
+        <p>Your account data is retained for as long as your account is active. If you delete your account, all associated data is deleted from our servers within 30 days.</p>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════
+         APP: POKERPALL
+    ══════════════════════════════ -->
+    <div class="policy-panel" id="panel-pokerpall" role="tabpanel">
+
+      <div class="app-header">
+        <p class="app-name">PokerPall</p>
+        <p class="app-meta">Effective date: May 2026 &nbsp;·&nbsp; Platform: iOS &amp; Android &nbsp;·&nbsp; Data controller: Puredata OÜ, Estonia</p>
+        <div class="quick-facts">
+          <span class="fact-chip yes">No account required</span>
+          <span class="fact-chip yes">Game history stays on device</span>
+          <span class="fact-chip note">Ads on free tier</span>
+          <span class="fact-chip note">Anonymous usage analytics</span>
+        </div>
+      </div>
+
+      <div class="privacy-content">
+
+        <h2>Who we are</h2>
+        <p>PokerPall is developed and operated by Puredata OÜ, a company registered in Estonia, European Union. As an EU-registered company we are subject to the General Data Protection Regulation (GDPR).</p>
+
+        <h2>What data we collect and why</h2>
+        <p>PokerPall works without an account. No email address, no sign-in, no profile. The sections below cover every type of data that flows outside your device.</p>
+
+        <p><strong>Game history and player data</strong> — everything you enter (player names, buy-in amounts, chip counts, game results) is stored locally on your device. This data is never sent to our servers.</p>
+
+        <p><strong>Multiplayer session data</strong> — when you start or join a multiplayer game, the room code and the player name you enter for that session are sent to Supabase to sync the game across devices in real time. This data exists only for the duration of the game. When the game ends, the session is deleted from Supabase immediately. No game history is retained server-side.</p>
+
+        <p><strong>Anonymous usage analytics</strong> — we use PostHog to collect anonymous usage events such as which screens you visit and which features you use. These events contain no personal data and cannot be linked to you individually. This helps us understand how the app is being used so we can improve it.</p>
+
+        <p><strong>Advertising (free tier only)</strong> — if you use the free tier, Google AdMob displays banner and interstitial ads. Google may collect your advertising identifier (IDFA on iOS, GAID on Android) and use it to personalise ads. This data is controlled by Google under their privacy policy. You can opt out of personalised ads in your device settings. The premium tier has no ads and no advertising data is collected.</p>
+
+        <p><strong>In-app purchase</strong> — if you purchase the premium upgrade, the transaction is processed entirely by Google Play or Apple App Store. RevenueCat receives an anonymised purchase receipt to verify your purchase status. We do not see or store your payment details.</p>
+
+        <h2>What we do not collect</h2>
+        <ul>
+          <li>We do not collect your name, email address, or any contact information</li>
+          <li>We do not store game history or player data on our servers</li>
+          <li>We do not sell your data to any third party</li>
+          <li>We do not track your location</li>
+        </ul>
+
+        <h2>Data storage and security</h2>
+        <p>Multiplayer session data is stored in a Supabase database in Frankfurt, Germany (EU) and deleted immediately at game end. Anonymous analytics events are processed by PostHog and stored in the EU. All data in transit is encrypted using TLS.</p>
+
+        <h2>Third-party processors</h2>
+        <table class="processors-table">
+          <thead>
+            <tr><th>Processor</th><th>Purpose</th><th>Location</th><th>Policy</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Supabase</td>
+              <td>Multiplayer real-time session sync (ephemeral)</td>
+              <td>Frankfurt, EU</td>
+              <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>PostHog</td>
+              <td>Anonymous usage analytics</td>
+              <td>EU</td>
+              <td><a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Google AdMob</td>
+              <td>Advertising on free tier</td>
+              <td>USA</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>RevenueCat</td>
+              <td>In-app purchase verification</td>
+              <td>USA</td>
+              <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Google Play</td>
+              <td>App distribution and payment (Android)</td>
+              <td>USA</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Apple App Store</td>
+              <td>App distribution and payment (iOS)</td>
+              <td>USA</td>
+              <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════
+         SHARED — always visible
+    ══════════════════════════════ -->
+    <div class="shared-section">
+      <p class="shared-label">Applies to all apps</p>
+      <div class="privacy-content">
+
+        <h2>Your rights under GDPR</h2>
+        <p>As a data subject under GDPR you have the right to access, rectify, or erase your personal data, to restrict or object to processing, and to data portability. To exercise any of these rights, contact us at the address below. We will respond within 30 days.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If we make material changes to how any of our apps handle your data, we will update the relevant section of this page and revise the effective date shown in the app header above. Continued use of an app after a policy update constitutes acceptance of the revised terms.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy-related questions or data deletion requests, contact us at <a href="mailto:info@puredata.ee">info@puredata.ee</a>. We will respond within 30 days.</p>
+
+      </div>
+    </div>
+
   </main>
 
   <footer>
     <span>Puredata OÜ</span> &nbsp;·&nbsp; Tallinn, Estonia &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; <a href="/">puredata.ee</a>
   </footer>
+
+  <script>
+    function showApp(appId, btn) {
+      document.querySelectorAll('.policy-panel').forEach(p => p.classList.remove('visible'));
+      document.querySelectorAll('.app-pill').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.getElementById('panel-' + appId).classList.add('visible');
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+    }
+
+    /* Deep-link support: puredata.ee/privacy#pokerpall */
+    const hash = location.hash.replace('#', '');
+    if (hash) {
+      const btn = document.querySelector('[aria-controls="panel-' + hash + '"]');
+      if (btn) showApp(hash, btn);
+    }
+  </script>
 
 </body>
 </html>
