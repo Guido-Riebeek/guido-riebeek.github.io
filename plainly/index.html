@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plainly — a private family app by Puredata OÜ</title>
+  <meta name="description" content="Plainly is a private personal finance app that Puredata OÜ builds for one family. It is not publicly available." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
+  <style>
+    .feature-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem 2rem;
+      margin: 1rem 0 0;
+      padding: 0;
+    }
+    .feature-list li { border-left: 2px solid var(--tan); padding-left: 1rem; }
+    .feature-list strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--walnut);
+    }
+    .feature-list span { font-size: 0.86rem; color: var(--text-mid); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Plainly">
+    <a href="/" class="nav-logo">Puredata OÜ</a>
+    <ul class="nav-links">
+      <li><a href="/plainly/" aria-current="page">Plainly</a></li>
+      <li><a href="/plainly/privacy">Privacy</a></li>
+      <li><a href="/plainly/terms">Terms</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <p class="eyebrow">Puredata OÜ &nbsp;·&nbsp; Private app</p>
+    <h1>Plainly</h1>
+    <p class="lede">A calm, simple personal finance app that we build for our own family. It is not a commercial product: it is not for sale, it is not listed in any app store, and we do not take on new users.</p>
+
+    <div class="chips">
+      <span class="chip">Private · invitation only</span>
+      <span class="chip">Android</span>
+      <span class="chip good">No ads, no tracking</span>
+      <span class="chip good">Data hosted in the EU</span>
+    </div>
+
+    <div class="callout">
+      <p><strong>Plainly is an internal, personal product.</strong> Only members of one family, invited by Puredata OÜ, can install it, through a closed Google Play testing track. There is no public download, sign-up or price.</p>
+      <p>When the family connects a bank account, Plainly gets <strong>read-only</strong> access to that account's balance and transactions through Enable Banking, a licensed account information service provider. Plainly can never make payments or move money.</p>
+    </div>
+
+    <div class="prose">
+      <h2>What it does</h2>
+    </div>
+    <ul class="feature-list">
+      <li><strong>Budgets</strong><span>Monthly budgets by category, and what's still safe to spend.</span></li>
+      <li><strong>Transactions</strong><span>Every payment in one place, searchable by month, category or account.</span></li>
+      <li><strong>Goals and bills</strong><span>Savings goals, and the recurring bills coming up next.</span></li>
+      <li><strong>Household</strong><span>Shared accounts, budgets and goals between family members.</span></li>
+      <li><strong>Bank sync</strong><span>New payments from the family's own bank accounts, brought in automatically and read-only.</span></li>
+      <li><strong>App lock</strong><span>A PIN or fingerprint in front of the app; data encrypted on the phone.</span></li>
+    </ul>
+
+    <div class="prose">
+      <h2>How Plainly treats your data</h2>
+      <ul>
+        <li>Everything lives first in an encrypted database on your phone. Without an account, nothing leaves it.</li>
+        <li>With an account, a copy syncs to our database in Frankfurt (EU), so the family's phones stay in step. Only you, and the household members you share with, can read it.</li>
+        <li>No ads, no analytics, no tracking, and we never sell or share data with anyone outside the processors named in the privacy policy.</li>
+      </ul>
+    </div>
+
+    <hr class="rule" />
+
+    <p class="eyebrow">Legal</p>
+    <div class="card-grid">
+      <a class="card" href="/plainly/privacy">
+        <p class="card-title">Privacy policy</p>
+        <p class="card-text">What data Plainly uses, including bank data, where it is kept and for how long.</p>
+        <span class="card-link">Read →</span>
+      </a>
+      <a class="card" href="/plainly/terms">
+        <p class="card-title">Terms of use</p>
+        <p class="card-text">The rules for using Plainly and its bank connection.</p>
+        <span class="card-link">Read →</span>
+      </a>
+      <a class="card" href="/delete-account">
+        <p class="card-title">Delete account</p>
+        <p class="card-text">How to have your Plainly account and its data removed.</p>
+        <span class="card-link">How →</span>
+      </a>
+    </div>
+
+    <p class="meta">Plainly is made and operated by Puredata OÜ, Tallinn, Estonia. Questions: <a href="mailto:info@puredata.ee">info@puredata.ee</a>.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>Puredata OÜ</span> &nbsp;·&nbsp; Tallinn, Estonia &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp;
+    <a href="/plainly/privacy">Plainly privacy</a> &nbsp;·&nbsp; <a href="/plainly/terms">Plainly terms</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plainly Privacy Policy — Puredata OÜ</title>
+  <meta name="description" content="How Plainly, a private family finance app by Puredata OÜ, handles personal and bank data." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Plainly">
+    <a href="/" class="nav-logo">Puredata OÜ</a>
+    <ul class="nav-links">
+      <li><a href="/plainly/">Plainly</a></li>
+      <li><a href="/plainly/privacy" aria-current="page">Privacy</a></li>
+      <li><a href="/plainly/terms">Terms</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <p class="eyebrow">Plainly &nbsp;·&nbsp; Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective 4 October 2026 &nbsp;·&nbsp; Platform: Android &nbsp;·&nbsp; Data controller: Puredata OÜ, Estonia</p>
+    <div class="chips">
+      <span class="chip">Private family app</span>
+      <span class="chip good">Local-first, encrypted</span>
+      <span class="chip good">EU hosting</span>
+      <span class="chip good">Read-only bank access</span>
+      <span class="chip good">No ads or tracking</span>
+    </div>
+
+    <div class="callout">
+      <p><strong>In short.</strong> Plainly is a private, non-commercial app used only by one family. Your data stays on your phone unless you sign in; then a copy is kept in our EU database so your phones and your household stay in step. If you connect a bank account, Plainly reads its balance and transactions through Enable Banking, read-only, for as long as you allow it. We never sell data, show ads or track you.</p>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#audience">Who Plainly is for</a></li>
+        <li><a href="#device">Data on your phone</a></li>
+        <li><a href="#account">Your account</a></li>
+        <li><a href="#sync">Cloud sync and household</a></li>
+        <li><a href="#bank">Bank connection</a></li>
+        <li><a href="#not">What we don't do</a></li>
+        <li><a href="#processors">Who processes data</a></li>
+        <li><a href="#basis">Legal basis</a></li>
+        <li><a href="#retention">How long we keep data</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#rights">Your rights and choices</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <div class="prose">
+
+      <h2 id="who">1. Who we are</h2>
+      <p>Plainly is developed and operated by <strong>Puredata OÜ</strong>, a company registered in Estonia, European Union, which is the data controller for the data described here. We are subject to the EU General Data Protection Regulation (GDPR). Contact: <a href="mailto:info@puredata.ee">info@puredata.ee</a>.</p>
+
+      <h2 id="audience">2. Who Plainly is for</h2>
+      <p>Plainly is a <strong>personal, non-commercial project</strong> built by Puredata OÜ's founder for their own family. It is not sold, not advertised and not available to the public. The family members who use it are invited personally and install it through a closed Google Play testing track. This policy is written for them, and for the banks and providers Plainly connects to.</p>
+
+      <h2 id="device">3. Data on your phone</h2>
+      <p>Everything you put into Plainly — accounts, transactions, budgets, goals, recurring bills and categories — is stored in an <strong>encrypted database on your phone</strong>, protected by a key held in Android's secure keystore. If you turn on the app lock, only a salted hash of your PIN is stored, never the PIN itself; fingerprint unlock is handled by Android and Plainly never receives your fingerprint.</p>
+      <p>If you use Plainly without an account, <strong>nothing leaves your phone</strong>, and we have no access to it. Android device backups of Plainly are switched off, so the data is not copied to a cloud backup either.</p>
+
+      <h2 id="account">4. Your account</h2>
+      <p>An account is optional. It is needed for cloud sync, household sharing and bank connection. To create one we process:</p>
+      <ul>
+        <li><strong>Email address and password</strong> — to sign you in and to send account emails such as address confirmation and password reset. Passwords are stored only in hashed form by our authentication provider. We never send marketing email.</li>
+        <li><strong>Google sign-in (if you choose it)</strong> — Google shares your email address and basic profile (name and profile picture) with us. We use it only to sign you in.</li>
+        <li><strong>A sign-in session</strong> — kept in the encrypted database on your phone.</li>
+      </ul>
+
+      <h2 id="sync">5. Cloud sync and household sharing</h2>
+      <p>When you are signed in, Plainly keeps a copy of your finance data in our database (Supabase, Frankfurt, Germany) so that it stays the same on all your phones and can be restored if you lose one. Each user can reach only their own records; this is enforced by the database itself (row-level security), not just by the app.</p>
+      <p>If you join a household, the accounts, budgets, goals, bills and categories you choose to share — and the transactions on shared accounts — are visible to the other members of that household, together with who added them. A household's shared budget can also show other members their total spending per day in that budget, but never the description, payee or account of a private transaction. Members join only with an invite code you give them; Plainly never emails anyone on your behalf.</p>
+
+      <h2 id="bank">6. Bank connection</h2>
+      <p>Connecting a bank account is optional. When you do, Plainly gets <strong>read-only</strong> access to that account's information. Plainly <strong>cannot make payments, move money or change anything at your bank</strong>.</p>
+
+      <h3>Who provides the connection</h3>
+      <p>The connection runs through <strong>Enable Banking Oy</strong> (Espoo, Finland, business ID 2988499-7), an account information service provider registered with and supervised by the Finnish Financial Supervisory Authority (FIN-FSA) under the EU Payment Services Directive (PSD2). Enable Banking processes the data it needs to provide that service under its own <a href="https://enablebanking.com/terms/" target="_blank" rel="noopener">terms</a> and <a href="https://enablebanking.com/privacy/" target="_blank" rel="noopener">privacy notice</a>.</p>
+
+      <h3>How it works</h3>
+      <ol>
+        <li>In Plainly, you choose to connect your bank (Profile → Bank Sync).</li>
+        <li>You are sent to your bank's own sign-in page — for example LHV with Smart-ID or Mobile-ID. You pick which accounts to share and approve access there. <strong>Plainly never sees your bank login details</strong>, PIN codes or one-time codes.</li>
+        <li>Your bank confirms the approval to Enable Banking, and our server receives a session that lets it read the accounts you approved.</li>
+        <li>For each bank account, you choose which Plainly account it goes into and from which date. Accounts you leave out are never read.</li>
+      </ol>
+
+      <h3>What we receive</h3>
+      <ul>
+        <li><strong>Account details</strong> — the account's name, number (IBAN), currency and, if the bank provides it, the account holder's name.</li>
+        <li><strong>Balances</strong> — the account's current balance.</li>
+        <li><strong>Transactions</strong> — date, amount and currency, the other party's name and account number where the bank provides them, the payment description, and the bank's own reference for the transaction.</li>
+      </ul>
+
+      <h3>What we do with it</h3>
+      <p>We use bank data <strong>only</strong> to show your balances and bring your transactions into Plainly, so you don't have to type them in. Our server checks for new transactions up to four times a day per account (the limit PSD2 allows without you being present), and whenever you ask it to. New transactions are added to your Plainly account the same way a bank statement import would be: your own category rules are applied, duplicates are skipped, and transfers between your own accounts are recognised. Nothing is used for advertising, credit scoring, profiling or any other purpose, and nothing is passed on to anyone.</p>
+      <p>Fetched bank data is stored in our EU database and is readable only by you. The bank session is kept on our server only, in a place the app itself cannot read. Our technical logs record status codes, never amounts, payees or account numbers. If the Plainly account you import into is shared with your household, the imported transactions are visible to its members, like any other transaction on that account.</p>
+
+      <h3>How long access lasts, and how to stop it</h3>
+      <ul>
+        <li>Your bank approval is valid for <strong>up to 180 days</strong>. Plainly reminds you before it runs out; renewing takes one bank sign-in. If you don't renew, access simply ends.</li>
+        <li>You can stop access <strong>at any time</strong> in Plainly (Profile → Bank Sync → Disconnect). This ends the approval at the bank and deletes the fetched bank data from our server.</li>
+        <li>You can also withdraw the approval directly at your bank.</li>
+        <li>Transactions that were already brought into Plainly stay part of your Plainly data, like ones you typed in yourself. You can delete them like any other transaction, or delete your account (section 12).</li>
+      </ul>
+
+      <h2 id="not">7. What we don't do</h2>
+      <ul>
+        <li>No advertising and no advertising identifiers</li>
+        <li>No analytics, behavioural tracking or third-party tracking SDKs</li>
+        <li>No selling, renting or sharing of your data with anyone other than the processors listed below</li>
+        <li>No payments: Plainly has no access to initiate payments from your bank</li>
+        <li>No automated decisions about you</li>
+      </ul>
+
+      <h2 id="processors">8. Who processes data for us</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Provider</th><th>What for</th><th>Where</th><th>Policy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Database, sign-in and server functions (cloud sync, household, bank connection)</td>
+            <td>Frankfurt, EU</td>
+            <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Enable Banking Oy</td>
+            <td>Bank connection (licensed account information service)</td>
+            <td>Finland, EU</td>
+            <td><a href="https://enablebanking.com/privacy/" target="_blank" rel="noopener">enablebanking.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Google</td>
+            <td>Optional Google sign-in; app distribution through Google Play</td>
+            <td>USA / EU</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Your bank also processes your data when you approve and use the connection, as your bank, under its own privacy policy.</p>
+      <p>Where Google processes data outside the EU, the transfer is covered by the EU–US Data Privacy Framework and the EU Standard Contractual Clauses. Plainly has no paid features: earlier test versions used RevenueCat for in-app purchases, and Plainly no longer sends any data to it.</p>
+
+      <h2 id="basis">9. Legal basis</h2>
+      <ul>
+        <li><strong>Providing Plainly</strong> (account, sync, household, the app itself) — to provide the service you asked for (GDPR Art. 6(1)(b)).</li>
+        <li><strong>Bank connection</strong> — your explicit consent, given in Plainly and at your bank (GDPR Art. 6(1)(a) and PSD2). You can withdraw it at any time, as described in section 6.</li>
+        <li><strong>Security and abuse prevention</strong> (technical logs, sign-in protection) — our legitimate interest in keeping the service and your data safe (GDPR Art. 6(1)(f)).</li>
+      </ul>
+
+      <h2 id="retention">10. How long we keep data</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Data</th><th>Kept</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Data on your phone</td><td>Until you delete it or uninstall Plainly</td></tr>
+          <tr><td>Cloud copy of your finance data</td><td>As long as your account exists, so that you keep your full history</td></tr>
+          <tr><td>Items you delete</td><td>Permanently removed from our servers 90 days after deletion</td></tr>
+          <tr><td>Fetched bank data</td><td>Until you disconnect the bank, then deleted</td></tr>
+          <tr><td>Bank session</td><td>Until it expires (at most 180 days) or you disconnect</td></tr>
+          <tr><td>Your account</td><td>Until you ask us to delete it; then all its cloud data is deleted within 30 days</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="security">11. Security</h2>
+      <ul>
+        <li>All traffic is encrypted (HTTPS/TLS); Plainly refuses unencrypted connections.</li>
+        <li>On the phone, the database is encrypted with a key held by Android's keystore, and an optional app lock protects the app.</li>
+        <li>In the cloud, the database enforces that each user reaches only their own records and those of their household.</li>
+        <li>The keys for the bank connection exist only on our server, never in the app.</li>
+      </ul>
+
+      <h2 id="rights">12. Your rights and choices</h2>
+      <p>Under the GDPR you can ask us to <strong>access, correct or erase</strong> your personal data, to <strong>restrict</strong> or <strong>object</strong> to its processing, and to <strong>receive it</strong> in a portable format. Where we rely on consent, you can withdraw it at any time. In the app you can:</p>
+      <ul>
+        <li><strong>Export your data</strong> — Profile → Export My Data creates a JSON and CSV copy.</li>
+        <li><strong>Disconnect your bank</strong> — Profile → Bank Sync → Disconnect.</li>
+        <li><strong>Sign out</strong> — clears your session and account link from the phone.</li>
+        <li><strong>Delete your account</strong> — see <a href="/delete-account">puredata.ee/delete-account</a>.</li>
+      </ul>
+      <p>To use any other right, email <a href="mailto:info@puredata.ee">info@puredata.ee</a>; we reply within 30 days. You can also complain to the Estonian <a href="https://www.aki.ee/en" target="_blank" rel="noopener">Data Protection Inspectorate (Andmekaitse Inspektsioon)</a>, or to the data protection authority in the EU country where you live.</p>
+
+      <h2 id="changes">13. Changes to this policy</h2>
+      <p>If we change how Plainly handles your data, we update this page and its effective date. If a change affects the bank connection or needs your consent, we ask in the app before it takes effect.</p>
+
+      <h2 id="contact">14. Contact</h2>
+      <p>Puredata OÜ, Tallinn, Estonia — <a href="mailto:info@puredata.ee">info@puredata.ee</a></p>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Puredata OÜ</span> &nbsp;·&nbsp; Tallinn, Estonia &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp;
+    <a href="/plainly/">Plainly</a> &nbsp;·&nbsp; <a href="/plainly/terms">Terms</a> &nbsp;·&nbsp; <a href="/delete-account">Delete account</a>
+  </footer>
+
+</body>
+</html>
